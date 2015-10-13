@@ -46,7 +46,6 @@ end
 
 user 'jenkins' do
   comment 'jenkins'
-  system true
   shell '/bin/bash'
   home '/home/jenkins'
 end
@@ -59,6 +58,8 @@ ruby_block "insert_line" do
     file.write_file
   end
 end
+
+
 
 #copy phalon using ssh
 
