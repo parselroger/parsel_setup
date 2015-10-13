@@ -50,6 +50,14 @@ user 'jenkins' do
   home '/home/jenkins'
 end
 
+directory '/home/jenkins/.ssh' do
+  owner 'jenkins'
+  group 'jenkins'
+  mode '0755'
+  action :create
+end
+
+
 
 ruby_block "insert_line" do
   block do
