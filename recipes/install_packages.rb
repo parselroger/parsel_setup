@@ -1,5 +1,5 @@
 #packages to install
-apt_package ['php5', 
+package ['php5', 
 		 'php5-mysql', 
 		 'php5-memcache', 
 		 'php5-mcrypt', 
@@ -17,7 +17,9 @@ apt_package ['php5',
 		 'git',
 		 'make',
 		 'php5-imagick',
-		 'php5-geoip']
+		 'php5-geoip'] do
+	  action :upgrade
+end
 
 
 
