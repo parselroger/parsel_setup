@@ -35,7 +35,6 @@ package ['php5',
 		 'git',
 		 'make',
 		 'php5-imagick',
-		 'php5-geoip'] do
-	  action :upgrade
-end
+		 'php5-geoip']
+
 
