@@ -1,5 +1,5 @@
 #packages to install
-package ['php5', 
+apt_package ['php5', 
 		 'php5-mysql', 
 		 'php5-memcache', 
 		 'php5-mcrypt', 
