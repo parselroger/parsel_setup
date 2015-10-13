@@ -1,3 +1,21 @@
+
+
+
+
+# install geoip
+package "geoip-database" do
+  action :upgrade
+end
+
+package "geoip-bin" do
+  action :upgrade
+end
+
+package "libgeoip-dev" do
+  action :upgrade
+end
+
+
 #packages to install
 package ['php5', 
 		 'php5-mysql', 
@@ -20,22 +38,4 @@ package ['php5',
 		 'php5-geoip'] do
 	  action :upgrade
 end
-
-
-
-
-# install geoip
-package "geoip-database" do
-  action :upgrade
-end
-
-package "geoip-bin" do
-  action :upgrade
-end
-
-package "libgeoip-dev" do
-  action :upgrade
-end
-
-
 
