@@ -67,11 +67,5 @@ end
 
 #copy phalon using ssh
 
-bash 'extract_module' do
-  code <<-EOH
-	scp jenkins@mamba.openapps.com:parsel.me_build/phalcon.so /usr/lib/php5/20121212/
-    EOH
-end
-
 
 
