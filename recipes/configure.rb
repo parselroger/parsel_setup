@@ -55,6 +55,7 @@ directory '/home/jenkins/.ssh' do
   group 'jenkins'
   mode '0755'
   action :create
+  recursive true
 end
 
 
