@@ -23,9 +23,7 @@ file '/etc/apache2/sites-enabled/parsel.me.conf' do
 </VirtualHost>'
 end
 
-link '/etc/apache2/sites-enabled/000-default.conf' do
-  to '/etc/apache2/sites-enabled/parsel.me.conf'
-end
+
 
 
 
