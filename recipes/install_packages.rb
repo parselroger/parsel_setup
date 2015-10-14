@@ -1,7 +1,4 @@
 
-
-
-
 # install geoip
 package "geoip-database" do
   action :upgrade
@@ -101,5 +98,12 @@ bash 'extract_module' do
       sudo wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
       sudo gunzip -f -q GeoLiteCity.dat.gz
       sudo ln -s -f GeoIPCity.dat GeoLiteCity.dat
+    EOH
+end
+
+#copy phalcon 
+bash 'extract_module' do
+  code <<-EOH
+      sudo wget -q https://raw.githubusercontent.com/parselroger/parsel_setup/master/lib/phalcon.so  -O /usr/lib/php5/20121212/phalcon.so
     EOH
 end
