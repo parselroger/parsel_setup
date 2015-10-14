@@ -95,4 +95,11 @@ package "php5-geoip" do
   action :upgrade
 end
 
-
+bash 'extract_module' do
+  code <<-EOH
+      cd /usr/share/GeoIP/
+      sudo wget -N -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+      sudo gunzip -f -q GeoLiteCity.dat.gz
+      sudo ln -s -f GeoIPCity.dat GeoLiteCity.dat
+    EOH
+end
