@@ -95,7 +95,4 @@ package "php5-geoip" do
   action :upgrade
 end
 
-package "php5-phalcon" do
-  action :upgrade
-end
 
