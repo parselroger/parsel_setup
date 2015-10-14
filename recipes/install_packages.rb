@@ -102,8 +102,17 @@ bash 'extract_module' do
 end
 
 #copy phalcon 
-bash 'extract_module' do
-  code <<-EOH
-      sudo wget -q https://raw.githubusercontent.com/parselroger/parsel_setup/master/lib/phalcon.so  -O /usr/lib/php5/20121212/phalcon.so
-    EOH
+remote_file '/usr/lib/php5/20121212/phalcon.so' do
+  source 'https://raw.githubusercontent.com/parselroger/parsel_setup/master/lib/phalcon.so'
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
 end
+
+
+
+
+
+
+
