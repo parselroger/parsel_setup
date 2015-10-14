@@ -48,6 +48,7 @@ user 'jenkins' do
   comment 'jenkins'
   shell '/bin/bash'
   home '/home/jenkins'
+  system true
 end
 
 directory '/home/jenkins/.ssh' do
