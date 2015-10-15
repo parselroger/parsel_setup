@@ -107,7 +107,7 @@ remote_file '/usr/lib/php5/20121212/phalcon.so' do
   owner 'root'
   group 'root'
   mode '0755'
-  action :create
+  action :create_if_missing
 end
 
 
