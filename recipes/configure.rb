@@ -28,17 +28,17 @@ end
 
 
 
-file '/etc/php5/mods-available/20-phalon.ini' do
+file '/etc/php5/mods-available/phalon.ini' do
   content 'extension=phalcon.so'
 end
 
 link '/etc/php5/apache2/conf.d/20-phalon.ini' do
-  to '/etc/php5/mods-available/20-phalon.ini'
+  to '/etc/php5/mods-available/phalon.ini'
 end
 
 
 link '/etc/php5/cli/conf.d/20-phalon.ini' do
-  to '/etc/php5/mods-available/20-phalon.ini'
+  to '/etc/php5/mods-available/phalon.ini'
 end
 
 
